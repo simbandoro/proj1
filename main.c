@@ -6,13 +6,7 @@ int main()  {
     int shift; //this is to declare integer variable of type shift. 
                 //This is how many letters the encryption will be shifted by
                 
-             
-             
-  
-  
-  
-  
-  
+        
   
   return 0;
   }
