@@ -7,7 +7,7 @@ int main()  {
     int shift; //this is to declare integer variable of type shift. 
                 //This is how many letters the encryption will be shifted by
     int i;
-    int key;
+    //int key;
     
     
                 
@@ -23,7 +23,7 @@ int main()  {
         if (alphabet >= 'a' && alphabet <= 'z') {
             alphabet = alphabet + shift;
             
-                if (ch > 'z'){
+                if (alphabet > 'z'){
                     
                 }
         }
