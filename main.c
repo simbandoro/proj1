@@ -29,5 +29,11 @@ int main()  {
         }
     }
     
+    printf("Enter message: \n");
+    fgets(alphabet, 25, stdin);     //this reads the string (message) and is safer than gets
+    
+    printf("Encrypetd message is: \n");
+    puts(alphabet);     //this displays the message to the screen
+    
   return 0;
   }
