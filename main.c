@@ -2,14 +2,12 @@
 #include <string.h>     // for string length function
 
 int main()  {
-
+   
     char alphabet[26]; // this indicates that there are 26 characters type variables (so the alphabet from A to Z) 
     int shift; //this is to declare integer variable of type shift. 
                 //This is how many letters the encryption will be shifted by
     int i;
-    //int key;
-    
-    
+   
                 
         printf("Enter a message to encrypt: "); // yeah this is here 
         
@@ -28,13 +26,29 @@ int main()  {
                 }
         }
     }
+  
+    /******** ROTATION CIPHER BELOW ********
+    the cipher has a problem when letters are shifted past alphabet variables 
+    eg. if Z is shifted by 3 it will not print C    */
     
-    printf("Enter message: \n");
-    fgets(alphabet, 25, stdin);     //this reads the string (message) and is safer than gets
-    
-    printf("Encrypetd message is: \n");
-    puts(alphabet);     //this displays the message to the screen
-    
+  int i;
+  char str[200];
+  int shift; // how much each character is shifted by
+
+  printf ("\nEnter message:\t");	// \t prints a tab
+  // gets(str);
+  fgets (str, 200, stdin);	/* This is to get the string from the keyboard. fgets is safer to use than gets */
+
+  printf ("Encrypt the message by how much?\t");
+
+  scanf ("%d", &shift);
+
+  for (i = 0; (i < 200 && str[i] != '\0'); i++)
+    str[i] = (str[i] + shift);	/*the key for encryption is shift for me.
+				   this will be determined by the user 
+				   this is added to ASCII value */
+
+  printf ("\nEncrypted message: %s\n", str);
+  
   return 0;
   
-  }
