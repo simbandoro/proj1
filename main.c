@@ -33,22 +33,22 @@ int main()  {
     
   int i;
   char str[200];
-  int shift; // how much each character is shifted by
+  int shift; // how much each character is shifted by (rotation amount)
 
-  printf ("\nEnter message:\t");	// \t prints a tab
-  // gets(str);
+  printf ("\nENTER MESSAGE:\t");	// \t prints a tab
+  
   fgets (str, 200, stdin);	/* This is to get the string from the keyboard. fgets is safer to use than gets */
 
-  printf ("Encrypt the message by how much?\t");
+  printf ("ROTATION AMOUNT:\t");
 
-  scanf ("%d", &shift);
+  scanf ("%d", &shift); // this is to scan the rotation amount
 
   for (i = 0; (i < 200 && str[i] != '\0'); i++)
     str[i] = (str[i] + shift);	/*the key for encryption is shift for me.
 				   this will be determined by the user 
 				   this is added to ASCII value */
 
-  printf ("\nEncrypted message: %s\n", str);
+  printf ("\nENCRYPETD MESSAGE: %s\n", str);
   
   return 0;
   
