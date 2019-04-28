@@ -94,6 +94,8 @@ void upperCase(char str[]) {
     str[i] = (str[i] - shift);	/*the key for encryption is shift for me.
 				   this will be determined by the user 
 				   this is added to ASCII value */
+	
+  upperCase(str); // call the uppercase function so that the output is in uppercase	
 
   printf ("DECRYPTED MESSAGE: %s\n", str);
   
