@@ -10,7 +10,7 @@ int main()
     int shift; // how much each character is shifted by (rotation amount)
   
     char str[500];
-    //char location_string;   this is the position of a character in the substitution cipher
+    
     char SubKey[26] = {"QWERTYUIOPASDFGHJKLZXCVBNM"}; //this is the substitution key
     
     printf("Please choose from the following options:\n");
@@ -19,7 +19,6 @@ int main()
     printf("3 = Substitution cipher encryption\n");
     scanf("%d", &num);
     
-	//switch statement is for task selection
     switch (num) {
         case 1: 
           printf ("\nENTER MESSAGE:\t");	// \t prints a tab
@@ -59,8 +58,9 @@ int main()
           break;
           
         case 3:
-            printf("Enter message:\n");
+            printf("\nEnter message:\n");
             scanf("%s", str);
+            printf("%s\n", str);
             //fgets(str,500,stdin);
             
                 for (i=0; str[i] != '\0'; i++){
