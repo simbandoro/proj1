@@ -31,7 +31,11 @@ int main()  {
     the cipher has a problem when letters are shifted past alphabet variables 
     eg. if Z is shifted by 3 it will not print C    */
     
-  int i;
+void upperCase(char []); //declaring function to convert output to upper case
+
+int main()  {
+
+    int i;
   char str[500];
   int shift; // how much each character is shifted by (rotation amount)
 
@@ -48,9 +52,25 @@ int main()  {
 				   this will be determined by the user 
 				   this is added to ASCII value */
 
+  upperCase(str); // call the uppercase function so that the output is in uppercase
+  
   printf ("\nENCRYPETD MESSAGE: %s\n", str);
   
-  return 0;
+  return 0; 
+}
+
+/******* Defining function for converting text to uppercase ******/
+
+void upperCase(char str[]) {
+   int c = 0;
+   
+   while (str[c] != '\0') {
+      if (str[c] >= 'a' && str[c] <= 'z') {
+         str[c] = str[c] - 32; // this will make the ASCII value that of an uppercase character
+      }
+      c++;
+   }
+}
 	
 
 	
