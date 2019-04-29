@@ -100,7 +100,7 @@ main ()
 
       for (i = 0; str[i] != '\0'; i++)
 	{
-	  for (x = 0; x <= 26; x++)
+	  for (x = 0; x <= 25; x++)
 	    {
 	      if (str[i] == SubKey[x]) /* The location of the letter in SubKey
 	                                  should = location in string */
@@ -109,15 +109,14 @@ main ()
 		    {
 		      str[i] = str[i] - 32; //Converting to uppercase
 		    }
-		  if ((str[i] <= 90) && (str[i] >= 65))
-		    {
+		 
 		      str[i] = x + 65; //To get the ASCII of an uppercase value
 		      //printf("%c", str[i]);
-		    }
+
 		}
 	    }
 	}
-      printf ("Decrypted text is: %c", str[i]);
+      printf ("\nDecrypted text is: \n%s", str);
       break;
 
     default:
